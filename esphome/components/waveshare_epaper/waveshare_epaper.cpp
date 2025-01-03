@@ -2426,7 +2426,7 @@ void WaveshareEPaper7P5InBV3BWR::init_display_() {
 
   // 1-0=11: internal power
   this->data(0x07);
-  this->data(0x07);
+  this->data(0x17);
   this->data(0x3F);
   this->data(0x3F);
 
@@ -2450,7 +2450,7 @@ void WaveshareEPaper7P5InBV3BWR::init_display_() {
   this->data(0x00);
   // COMMAND VCOM AND DATA INTERVAL SETTING
   this->command(0x50);
-  this->data(0x11);
+  this->data(0x20);
   this->data(0x07);
   // COMMAND TCON SETTING
   this->command(0x60);
