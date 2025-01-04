@@ -2431,6 +2431,10 @@ void WaveshareEPaper7P5InBV3BWR::init_display_() {
   this->data(0x26);  // VSL=-9.4V?
   this->data(0x11);  // VSHR=5.8V?
 
+  // VCOM DC Setting
+  this->command(0x82);
+  this->data(0x24);  // VCOM=-1.9V
+
   // POWER ON
   this->command(0x04);
   delay(100);  // NOLINT
