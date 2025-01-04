@@ -2425,10 +2425,11 @@ void WaveshareEPaper7P5InBV3BWR::init_display_() {
   this->command(0x01);
 
   // 1-0=11: internal power
-  this->data(0x07);
-  this->data(0x3A);
-  this->data(0x3A);
-  this->data(0x03);
+  this->data(0x07);  // VRS_EN=1, VS_EN=1, VG_EN=1
+  this->data(0x17);  // VGH&VGL ??? VCOM_SLEW=1 but this is fixed, VG_LVL[2:0]=111 => VGH=20V VGL=-20V, it could be 0x07
+  this->data(0x3F);  // VSH=15V?
+  this->data(0x26);  // VSL=-9.4V?
+  this->data(0x11);  // VSHR=5.8V?
 
   // POWER ON
   this->command(0x04);
