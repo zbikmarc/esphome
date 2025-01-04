@@ -2426,9 +2426,9 @@ void WaveshareEPaper7P5InBV3BWR::init_display_() {
 
   // 1-0=11: internal power
   this->data(0x07);
-  this->data(0x07);
-  this->data(0x3F);
-  this->data(0x3F);
+  this->data(0x3A);
+  this->data(0x3A);
+  this->data(0x03);
 
   // POWER ON
   this->command(0x04);
