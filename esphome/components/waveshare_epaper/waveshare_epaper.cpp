@@ -2438,11 +2438,11 @@ void WaveshareEPaper7P5InBV3BWR::init_display_() {
   this->data(0x24);  // VCOM=-1.9V
 
   // Booster Setting
-  this->command(0x06);
-  this->data(0x27);
-  this->data(0x27);
-  this->data(0x18);
-  this->data(0x17);
+  //this->command(0x06);
+  //this->data(0x27);
+  //this->data(0x27);
+  //this->data(0x18);
+  //this->data(0x17);
   
   // POWER ON
   this->command(0x04);
